@@ -6,7 +6,7 @@ event\_name,
 
 COUNT(\*) AS total\_events
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 WHERE \_TABLE\_SUFFIX >= '20260215'
 
@@ -22,7 +22,7 @@ SELECT
 
 COUNT(DISTINCT user\_pseudo\_id) AS total\_users
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 WHERE \_TABLE\_SUFFIX >= '20260215'
 
@@ -34,7 +34,7 @@ SELECT
 
 COUNT(DISTINCT user\_pseudo\_id) AS new\_users
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 WHERE event\_name = 'first\_visit'
 
@@ -48,7 +48,7 @@ SELECT
 
 &#x20; COUNT(\*) AS total\_sessions
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 WHERE event\_name = 'session\_start'
 
@@ -66,7 +66,7 @@ ELSE COUNTIF(event\_name IN ('scroll','click','user\_engagement')) / COUNTIF(eve
 
 END AS engagement\_rate
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 WHERE \_TABLE\_SUFFIX >= '20260215'
 
@@ -76,7 +76,7 @@ First Seen:
 
 SELECT user\_pseudo\_id, MIN(event\_date) AS first\_seen\_date
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 WHERE \_TABLE\_SUFFIX >= '20260215'
 
@@ -96,7 +96,7 @@ WITH
 
 &#x20;     MIN(PARSE\_DATE('%Y%m%d', \_TABLE\_SUFFIX)) AS first\_seen\_date
 
-&#x20;   FROM `datacareerapp.analytics\_475926274.events\_\*`
+&#x20;   FROM `project.dataset.events_*`
 
 &#x20;   WHERE \_TABLE\_SUFFIX >= '20260215'
 
@@ -116,7 +116,7 @@ SELECT
 
 &#x20;   AS week\_number
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 JOIN first\_seen
 
@@ -264,7 +264,7 @@ SELECT
 
 FROM
 
-&#x20; `datacareerapp.analytics\_475926274.events\_\*`
+&#x20; `project.dataset.events_*`
 
 
 
@@ -284,7 +284,7 @@ WITH first\_seen AS (
 
 &#x20;   DATE\_TRUNC(MIN(PARSE\_DATE('%Y%m%d', \_TABLE\_SUFFIX)), WEEK(MONDAY)) AS first\_seen\_date
 
-&#x20; FROM `datacareerapp.analytics\_475926274.events\_\*`
+&#x20; FROM `project.dataset.events_*`
 
 &#x20; WHERE \_TABLE\_SUFFIX >= '20260215'
 
@@ -302,7 +302,7 @@ SELECT
 
 &#x20; COUNT(\*) / COUNT(DISTINCT user\_pseudo\_id) AS avg\_events\_per\_user
 
-FROM `datacareerapp.analytics\_475926274.events\_\*`
+FROM `project.dataset.events_*`
 
 JOIN first\_seen USING (user\_pseudo\_id)
 
