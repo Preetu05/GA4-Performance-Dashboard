@@ -39,7 +39,7 @@ The dashboard provides a single source of truth for user behaviour trends. It en
 
 📦 **Deliverables**
 
-- 2‑page Power BI dashboard
+- 4‑page Power BI dashboard
 
 - BigQuery SQL transformation scripts
 
