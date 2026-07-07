@@ -46,3 +46,18 @@ The dashboard provides a single source of truth for user behaviour trends. It en
 - Parameterised date‑range slicer
 
 - Weekly refresh setup
+
+## 📸 Dashboard Preview
+
+### 🏠 Home
+![Home](https://github.com/Preetu05/GA4-Performance-Dashboard/blob/main/DB_Home.jpg)
+
+### 📈 Overview & Acquisition
+![Overview](https://github.com/Preetu05/GA4-Performance-Dashboard/blob/main/DB_Overview%20and%20Acquistion.jpg)
+
+### 👥 User Engagement & Behaviour
+![Engagement](https://github.com/Preetu05/GA4-Performance-Dashboard/blob/main/DB_Retention%20and%20Cohort%20Summary.jpg)
+
+### 🔁 Retention & Cohort Summary
+![Retention](https://github.com/Preetu05/GA4-Performance-Dashboard/blob/main/DB_User%20Enagagement%20and%20Behaviour.jpg)
+
